@@ -30,7 +30,7 @@
 
     <div class="container">
         <div class="row">
-        <form class="col s8 offset-s2" action="form.php" method="post" enctype="multipart/form-data" autocomplete="off">
+        <form class="col s8 offset-s2" action="index.php" method="post" enctype="multipart/form-data" autocomplete="off">
         <div class="row">
             <h1 class="center-align">Bienvenue, inscrivez-vous ! </h1>
         </div>
