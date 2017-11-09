@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         //create SQL query string for inserting data into the database
         $sql = "INSERT INTO users (username, email, password, avatar) "
-        . "VALUES ('$username', '$email', '$password', 'shadowman.png')";
+        . "VALUES ('$username', '$email', '$password', 'images/shadowman.png')";
 
         if ($mysqli->query($sql) === true)
         {
