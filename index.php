@@ -23,7 +23,7 @@
         <a href="#" class="brand-logo center">Red Hat OpenShift Démonstration</a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
             <li><a href="welcome.php">Home</a></li>
-            <li><a href="form.php">Register</a></li>
+            <li><a href="index.php">Register</a></li>
         </ul>
         </div>
     </nav>
