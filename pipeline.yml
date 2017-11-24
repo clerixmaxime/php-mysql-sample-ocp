@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: BuildConfig
+metadata:
+  name: jreda-pipeline
+  labels:
+    name: jreda-pipeline
+  annotations:
+    pipeline.alpha.openshift.io/uses: '[{"name": "inscription-jreda", "namespace": "", "kind": "DeploymentConfig"}]'
+spec:
+  triggers:
+    - type: GitHub
+      github:
+        secret: secret101
+    - type: Generic
+      generic:
+        secret: secret101
+  runPolicy: Serial
+  source:
+    type: None
+  strategy:
+    type: JenkinsPipeline
+    jenkinsPipelineStrategy:
+      jenkinsfile: >-
+        node('nodejs') {
+            stage 'Test - Construction image'
+            openshiftBuild(namespace: 'php-jreda-test', buildConfig: 'inscription-jreda',
+            showBuildLogs: 'true')
+            stage 'Test - Déploiement image'
+            openshiftDeploy(namespace: 'php-jreda-test', deploymentConfig: 'inscription-jreda')
+            input 'Do you want to deploy the application in Prod Environment ?'
+            stage 'Prod - Déploiement image'
+            openshiftTag(namespace: 'php-jreda-test', sourceStream: 'inscription-jreda',
+            sourceTag: 'latest', destinationStream: 'inscription-jreda', destinationTag:
+            'prodReady')
+            openshiftDeploy(namespace: 'php-jreda-prod', deploymentConfig: 'inscription-jreda')
+        }
+  output: {}
+  resources: {}
+  postCommit: {}
