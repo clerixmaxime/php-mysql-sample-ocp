@@ -22,8 +22,8 @@
         <div class="nav-wrapper">
         <a href="#" class="brand-logo center">Inscription Journée JRéDA</a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="welcome.php">Home</a></li>
-            <li><a href="index.php">Register</a></li>
+            <li><a href="welcome.php">Accueil</a></li>
+            <li><a href="index.php">S'inscrire</a></li>
         </ul>
         </div>
     </nav>
@@ -49,13 +49,13 @@
         <div class="row">
             <div class="input-field col s12">
                 <input id="password" type="password" class="validate" name="password" autocomplete="new-password" required>
-                <label for="password">Password</label>
+                <label for="password">Mot de passe</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <input id="password" type="password" class="validate" name="confirmpassword" autocomplete="new-password" required >
-                <label for="password">Confirm password</label>
+                <label for="password">Confirmer le mot de passe</label>
             </div>
         </div>
         <div class="row">
