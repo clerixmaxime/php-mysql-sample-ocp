@@ -27,7 +27,8 @@ spec:
             showBuildLogs: 'true')
             stage 'Test - Déploiement image'
             openshiftDeploy(namespace: 'php-jreda-test', deploymentConfig: 'inscription-jreda')
-            input 'Do you want to deploy the application in Prod Environment ?'
+            stage 'Approbation pour prod'
+            input 'Souhaitez-vous déployer l'application dans l'environnement de production ?'
             stage 'Prod - Déploiement image'
             openshiftTag(namespace: 'php-jreda-test', sourceStream: 'inscription-jreda',
             sourceTag: 'latest', destinationStream: 'inscription-jreda', destinationTag:
