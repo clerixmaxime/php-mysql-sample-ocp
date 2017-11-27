@@ -20,7 +20,7 @@
 <body>
     <nav>
         <div class="nav-wrapper">
-        <a href="#" class="brand-logo center">Inscription Journées JRéda</a>
+        <a href="#" class="brand-logo center">Inscription</a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
             <li><a href="welcome.php">Accueil</a></li>
             <li><a href="index.php">S'inscrire</a></li>
@@ -60,7 +60,7 @@
         </div>
         <div class="row">
             <div class="input-field col s4 offset-s4">
-                <input type="submit" value="S'inscrire" name="register" class="btn btn-block btn-primary" />
+                <input type="submit" value="Register" name="register" class="btn btn-block btn-primary" />
             </div>
         </div>
         </form>
