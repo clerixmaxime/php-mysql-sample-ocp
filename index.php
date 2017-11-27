@@ -20,7 +20,7 @@
 <body>
     <nav>
         <div class="nav-wrapper">
-        <a href="#" class="brand-logo center">Inscription</a>
+        <a href="#" class="brand-logo center">Inscription Journées JRéda</a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
             <li><a href="welcome.php">Accueil</a></li>
             <li><a href="index.php">S'inscrire</a></li>
