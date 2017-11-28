@@ -60,7 +60,7 @@
         </div>
         <div class="row">
             <div class="input-field col s4 offset-s4">
-                <input type="submit" value="Register" name="register" class="btn btn-block btn-primary" />
+                <input type="submit" value="S'inscrire" name="register" class="btn btn-block btn-primary" />
             </div>
         </div>
         </form>
